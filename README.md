@@ -6,6 +6,6 @@ Each line of the input file should conatain one command in the following format:
 Due to a quartic polynomial shading meethod, currently the images ten to have a purple-ish shade. I'm working on that as of now.
 Feel free to suggest any other methods for shading. Email me at info@keshlabs.in
 
-I have included a sample "inp.txt" file. It produces 3 images "sample1.bmp" "sample2.bmp" "sample3.bmp". 
+I have included a sample "inp.txt" file. It produces 6 sample images. 
 
 Hope you like my work :)
