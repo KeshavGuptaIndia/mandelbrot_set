@@ -1,6 +1,6 @@
 You can use this tool to generate frames of a zoom sequence of the mandelbrot set, or individual images.
 
-For creating a zoom sequence, execute "zoom_sequence.exe". It asks for the required information, and produces a file, which must be renamed to "inp.txt". Then, execute "mandel.exe". The output will be several bmp files, named in order.
+For creating a zoom sequence, execute "zoom_sequence.exe". It asks for the required information, and produces a file, which must be renamed to "inp.txt". Then, execute "mandel.exe". The output will be several bmp files, named in order. You can then use something such as FFmpeg to compile it to a video.
 
 To generate individual images of a specified region of the mandelbrot set:
 The folder of the executable "mandel.exe" should contain an input file named "inp.txt".
