@@ -36,7 +36,7 @@ int main(int argc, const char * argv[])
 {
     cout<<"Enter one command per line in the format:\n"
         <<"<output file> <width> <height> <min real> <max real> <min imag> <max imag> <iterations> <red> <blue> <green>\n\n";
-    ifstream incmd("inp.txt",ios::binary);
+    ifstream incmd("inp.txt");
     if(!incmd)
     {
         cout<<"Failed to open input commands file!";
@@ -68,7 +68,7 @@ int main(int argc, const char * argv[])
     while(!incmd.eof())
     {
         incmd>>filename;
-        outppm.open(filename);
+        outppm.open(filename,ios::binary);
         incmd>>imagewidth;
         incmd>>imageheight;
         paddedwidth = (imagewidth*3)+((imagewidth*3)%4?((-imagewidth*3)%4+4):0);
@@ -106,9 +106,6 @@ int main(int argc, const char * argv[])
                 b = (9*(1-t)*t*t*t*b_max);
                 r = (15*(1-t)*(1-t)*t*t*r_max);
                 g = (8.5*(1-t)*(1-t)*(1-t)*t*g_max);
-                if(r==10 or r==13) r-=1;
-                if(g==10 or g==13) g-=1;
-                if(b==10 or b==13) b-=1;
                 outppm.write(&b,1);
                 outppm.write(&g,1);
                 outppm.write(&r,1);
